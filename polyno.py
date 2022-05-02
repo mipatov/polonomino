@@ -1,10 +1,13 @@
 import numpy as np
+import json
 from module import *
 
-T = (3, 5)
-R = [((2, 2), 1)]
-# R = [((2,2),1),((3,1),1)]
-L = [((3, 2), 1), ((2, 2), 2)]
+with open('input_data.json', 'r') as f:
+    input_data = json.load(f)
+
+T = input_data['T']
+R = input_data['R']
+L = input_data['L']
 
 rect_list = []
 
